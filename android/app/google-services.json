@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "93640063192",
+    "project_id": "skillswap-e84de",
+    "storage_bucket": "skillswap-e84de.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:93640063192:android:7563f4a7a44392f9ed7fad",
+        "android_client_info": {
+          "package_name": "dev.nikkothe.skillswap"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKLOuqHP4pS8f6GWHVK5t7YXcUCSu55Lw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:93640063192:android:12ae28301b94768bed7fad",
+        "android_client_info": {
+          "package_name": "dev.nikkothe.skillswap"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKLOuqHP4pS8f6GWHVK5t7YXcUCSu55Lw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,28 +1,44 @@
 import 'dart:io';
 
 import 'package:easy_localization/easy_localization.dart';
+import 'package:firebase_core/firebase_core.dart'; // Import Firebase Core
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_displaymode/flutter_displaymode.dart';
 import 'package:hive/hive.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:skill_swap/firebase_options.dart';
+import 'package:skill_swap/services/locator_service.dart';
+import 'package:skill_swap/ui/screens/login_screen.dart';
 
 import 'config/theme.dart';
 import 'cubit/theme_cubit.dart';
 import 'ui/screens/skeleton_screen.dart';
 
-/// Try using const constructors as much as possible!
-
+/// The main entry point of the application.
 void main() async {
-  /// Initialize packages
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Initialize Firebase
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
+  // Configure dependency injection
+  await LocatorService.configureLocalModuleInjection();
+
+  /// Initialize packages
   await EasyLocalization.ensureInitialized();
   if (Platform.isAndroid) {
     await FlutterDisplayMode.setHighRefreshRate();
   }
+
+  // Initialize Hive
   final Directory tmpDir = await getTemporaryDirectory();
   Hive.init(tmpDir.toString());
+
+  // Initialize Hydrated Bloc
   HydratedBloc.storage = await HydratedStorage.build(
     storageDirectory: tmpDir,
   );
@@ -41,6 +57,7 @@ void main() async {
   );
 }
 
+/// The root widget of the application.
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -52,7 +69,7 @@ class MyApp extends StatelessWidget {
         builder: (BuildContext context, ThemeModeState state) {
           return MaterialApp(
             /// Localization is not available for the title.
-            title: 'Flutter Production Boilerplate',
+            title: 'SkillSwap',
 
             /// Theme stuff
             theme: lightTheme,
@@ -64,7 +81,7 @@ class MyApp extends StatelessWidget {
             supportedLocales: context.supportedLocales,
             locale: context.locale,
             debugShowCheckedModeBanner: false,
-            home: const SkeletonScreen(),
+            home: const LoginScreen(),
           );
         },
       ),

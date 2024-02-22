@@ -1,4 +1,4 @@
-package dev.feichtinger.flutter_production_boilerplate
+package dev.nikkothe.skillswap
 
 import io.flutter.embedding.android.FlutterActivity
 
