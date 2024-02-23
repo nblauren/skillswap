@@ -56,14 +56,16 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
     <key>CFBundleURLTypes</key>
-    <array>
-      <dict>
-        <key>CFBundleURLSchemes</key>
-        <array>
-          <string>fb204235339443849</string>
-        </array>
-      </dict>
-    </array>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>https</string>
+			</array>
+			<key>CFBundleURLName</key>
+			<string>skillswap-e84de.web.app</string>
+		</dict>
+	</array>
     <key>FacebookAppID</key>
     <string>204235339443849</string>
     <key>FacebookClientToken</key>
