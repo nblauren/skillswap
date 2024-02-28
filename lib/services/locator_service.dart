@@ -1,6 +1,7 @@
 import 'package:get_it/get_it.dart';
 
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:skill_swap/services/auth_service.dart';
 
 /// A service locator class to manage and retrieve various services.
 class LocatorService {
@@ -11,8 +12,13 @@ class LocatorService {
     // Register SharedPreferences as a singleton asynchronously
     getIt.registerSingletonAsync<SharedPreferences>(
         SharedPreferences.getInstance);
+
+    getIt.registerSingleton<AuthService>(AuthService());
   }
 
   /// Getter for SharedPreferences instance.
   static SharedPreferences get sharedPreferences => getIt<SharedPreferences>();
+
+  /// Getter for AuthService instance.
+  static AuthService get authService => getIt<AuthService>();
 }
