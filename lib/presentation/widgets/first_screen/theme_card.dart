@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '../../../cubit/theme_cubit.dart';
+import 'package:skill_swap/business_logic/cubit/theme_cubit.dart';
 
 class ThemeCard extends StatelessWidget {
   const ThemeCard({

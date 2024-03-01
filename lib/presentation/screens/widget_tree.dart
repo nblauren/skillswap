@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:skill_swap/services/locator_service.dart';
-import 'package:skill_swap/ui/screens/add_personal_info_screen.dart';
-import 'package:skill_swap/ui/screens/login_screen.dart';
-import 'package:skill_swap/ui/screens/skeleton_screen.dart';
+import 'package:skill_swap/presentation/screens/add_personal_info_screen.dart';
+import 'package:skill_swap/presentation/screens/login_screen.dart';
+import 'package:skill_swap/presentation/screens/skeleton_screen.dart';
 
 class WidgetTree extends StatefulWidget {
   const WidgetTree({super.key});

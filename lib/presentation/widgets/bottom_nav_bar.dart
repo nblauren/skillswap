@@ -2,8 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '../../cubit/bottom_nav_cubit.dart';
+import 'package:skill_swap/business_logic/cubit/bottom_nav_cubit.dart';
 
 class BottomNavBar extends StatelessWidget {
   /// It is okay not to use a const constructor here.

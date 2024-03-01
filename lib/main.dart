@@ -8,11 +8,11 @@ import 'package:flutter_displaymode/flutter_displaymode.dart';
 import 'package:hive/hive.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:skill_swap/business_logic/cubit/theme_cubit.dart';
 import 'package:skill_swap/firebase_options.dart';
 import 'package:skill_swap/services/locator_service.dart';
-import 'package:skill_swap/ui/screens/widget_tree.dart';
+import 'package:skill_swap/presentation/screens/widget_tree.dart';
 import 'config/theme.dart';
-import 'cubit/theme_cubit.dart';
 import 'package:uni_links/uni_links.dart';
 import 'package:flutter/services.dart';
 

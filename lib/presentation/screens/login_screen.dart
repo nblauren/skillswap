@@ -1,11 +1,11 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:skill_swap/helpers/theme_helper.dart';
-import 'package:skill_swap/ui/widgets/header_widget.dart';
-import 'package:skill_swap/ui/widgets/login_screen/apple_login_button.dart';
-import 'package:skill_swap/ui/widgets/login_screen/email_login_form.dart';
-import 'package:skill_swap/ui/widgets/login_screen/facebook_login_button.dart';
-import 'package:skill_swap/ui/widgets/login_screen/google_login_button.dart';
+import 'package:skill_swap/presentation/widgets/header_widget.dart';
+import 'package:skill_swap/presentation/widgets/login_screen/apple_login_button.dart';
+import 'package:skill_swap/presentation/widgets/login_screen/email_login_form.dart';
+import 'package:skill_swap/presentation/widgets/login_screen/facebook_login_button.dart';
+import 'package:skill_swap/presentation/widgets/login_screen/google_login_button.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});

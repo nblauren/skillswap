@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:skill_swap/cubit/add_personal_info_stepper_cubit.dart';
+import 'package:skill_swap/business_logic/cubit/add_personal_info_stepper_cubit.dart';
 
 class AddPersonalInfoScreen extends StatelessWidget {
   const AddPersonalInfoScreen({super.key});
