@@ -3,7 +3,6 @@ import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-
 import '../../cubit/bottom_nav_cubit.dart';
 
 class BottomNavBar extends StatelessWidget {
@@ -44,6 +43,10 @@ class BottomNavBar extends StatelessWidget {
             BottomNavigationBarItem(
               icon: const Icon(FluentIcons.info_24_regular),
               label: tr('bottom_nav_second'),
+            ),
+            BottomNavigationBarItem(
+              icon: const Icon(FluentIcons.settings_16_filled),
+              label: tr('bottom_nav_third'),
             ),
           ],
         );

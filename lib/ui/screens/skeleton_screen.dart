@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:skill_swap/ui/screens/settings_screen.dart';
 
 import '../../cubit/bottom_nav_cubit.dart';
 import '../widgets/app_bar_gone.dart';
@@ -15,26 +16,28 @@ class SkeletonScreen extends StatelessWidget {
     const List<Widget> pageNavigation = <Widget>[
       FirstScreen(),
       SecondScreen(),
+      SettingsScreen(),
     ];
 
     return BlocProvider<BottomNavCubit>(
-        create: (BuildContext context) => BottomNavCubit(),
-        child: Scaffold(
-          extendBodyBehindAppBar: true,
-          appBar: const AppBarGone(),
+      create: (BuildContext context) => BottomNavCubit(),
+      child: Scaffold(
+        extendBodyBehindAppBar: true,
+        appBar: const AppBarGone(),
 
-          /// When switching between tabs this will fade the old
-          /// layout out and the new layout in.
-          body: BlocBuilder<BottomNavCubit, int>(
-            builder: (BuildContext context, int state) {
-              return AnimatedSwitcher(
-                  duration: const Duration(milliseconds: 300),
-                  child: pageNavigation.elementAt(state));
-            },
-          ),
+        /// When switching between tabs this will fade the old
+        /// layout out and the new layout in.
+        body: BlocBuilder<BottomNavCubit, int>(
+          builder: (BuildContext context, int state) {
+            return AnimatedSwitcher(
+                duration: const Duration(milliseconds: 300),
+                child: pageNavigation.elementAt(state));
+          },
+        ),
 
-          bottomNavigationBar: const BottomNavBar(),
-          backgroundColor: Theme.of(context).colorScheme.background,
-        ));
+        bottomNavigationBar: const BottomNavBar(),
+        backgroundColor: Theme.of(context).colorScheme.background,
+      ),
+    );
   }
 }

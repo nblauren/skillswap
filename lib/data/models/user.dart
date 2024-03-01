@@ -1,20 +1,20 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class User {
-  String? id;
-  late String username;
-  late String email;
-  late String password;
+  String id;
+  String firebaseUid;
   String? profilePicture;
+  String? street;
+  String? city;
+  String? state;
+  String? country;
   String? location;
   int? skillPoints;
   Map<String, dynamic>? paymentInformation;
 
   User({
-    this.id,
-    required this.username,
-    required this.email,
-    required this.password,
+    required this.id,
+    required this.firebaseUid,
     this.profilePicture,
     this.location,
     this.skillPoints,
@@ -25,9 +25,7 @@ class User {
     var data = snapshot.data() as Map<String, dynamic>;
     return User(
       id: snapshot.id,
-      username: data['username'],
-      email: data['email'],
-      password: data['password'],
+      firebaseUid: data['firebaseUid'],
       profilePicture: data['profilePicture'],
       location: data['location'],
       skillPoints: data['skillPoints'],
@@ -37,9 +35,7 @@ class User {
 
   Map<String, dynamic> toMap() {
     return {
-      'username': username,
-      'email': email,
-      'password': password,
+      'firebaseUid': firebaseUid,
       'profilePicture': profilePicture,
       'location': location,
       'skillPoints': skillPoints,

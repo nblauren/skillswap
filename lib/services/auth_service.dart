@@ -5,6 +5,9 @@ import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
 class AuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
+  // Auth state changes listener
+  Stream<User?> get authStateChanges => _auth.authStateChanges();
+
   // Send email link
   Future sendEmailLink(
       String email, ActionCodeSettings actionCodeSettings) async {

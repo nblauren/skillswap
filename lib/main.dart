@@ -10,12 +10,11 @@ import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:skill_swap/firebase_options.dart';
 import 'package:skill_swap/services/locator_service.dart';
-import 'package:skill_swap/ui/screens/login_screen.dart';
+import 'package:skill_swap/ui/screens/widget_tree.dart';
 import 'config/theme.dart';
 import 'cubit/theme_cubit.dart';
 import 'package:uni_links/uni_links.dart';
 import 'package:flutter/services.dart';
-import 'ui/screens/skeleton_screen.dart';
 
 // Handle incoming app links
 void initUniLinks() async {
@@ -104,7 +103,7 @@ class MyApp extends StatelessWidget {
             supportedLocales: context.supportedLocales,
             locale: context.locale,
             debugShowCheckedModeBanner: false,
-            home: const LoginScreen(),
+            home: const WidgetTree(),
           );
         },
       ),
